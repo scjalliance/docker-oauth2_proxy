@@ -1,11 +1,11 @@
 FROM golang
 
-MAINTAINER Jodok Batlogg "jodok@crate.io"
+MAINTAINER Dusty Wilson "dusty.wilson@scjalliance.com"
 
-RUN git clone --branch v2.0.1 https://github.com/bitly/oauth2_proxy.git /go/src/app
+RUN git clone https://github.com/scjalliance/oauth2_proxy.git /go/src/app
 
-RUN go get -d -v github.com/bitly/oauth2_proxy
-RUN go install -v github.com/bitly/oauth2_proxy
+RUN go get -d -v github.com/scjalliance/oauth2_proxy
+RUN go install -v github.com/scjalliance/oauth2_proxy
 
 VOLUME /conf
 
